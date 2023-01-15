@@ -1,9 +1,14 @@
-module uim.collections.iterators;
+/*********************************************************************************************************
+  Copyright: © 2015-2023 Ozan Nurettin Süel (Sicherheitsschmiede)                                        
+  License: Subject to the terms of the Apache 2.0 license, as written in the included LICENSE.txt file.  
+  Authors: Ozan Nurettin Süel (Sicherheitsschmiede)                                                      
+**********************************************************************************************************/
+module uim.collections.iterators.buffered;
 
 import uim.collections.Collection;
-use Countable;
+/* use Countable;
 use Serializable;
-use SplDoublyLinkedList;
+use SplDoublyLinkedList; */
 
 /**
  * Creates an iterator from another iterator that will keep the results of the inner

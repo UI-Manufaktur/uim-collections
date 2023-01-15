@@ -1,11 +1,16 @@
+/*********************************************************************************************************
+  Copyright: © 2015-2023 Ozan Nurettin Süel (Sicherheitsschmiede)                                        
+  License: Subject to the terms of the Apache 2.0 license, as written in the included LICENSE.txt file.  
+  Authors: Ozan Nurettin Süel (Sicherheitsschmiede)                                                      
+**********************************************************************************************************/
 module uim.collections.interface_;
 
 @safe:
 import uim.cake
 
-use Iterator;
+/* use Iterator;
 use JsonSerializable;
-use Traversable;
+use Traversable; */
 
 /**
  * Describes the methods a Collection should implement. A collection is an immutable

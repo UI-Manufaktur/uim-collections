@@ -8,18 +8,17 @@ module uim.collections.collection;
 @safe:
 import uim.cake;
 
-use ArrayIterator;
+/* use ArrayIterator;
 use Exception;
 use IteratorIterator;
-use Serializable;
+use Serializable; */
 
 /**
  * A collection is an immutable list of elements with a handful of functions to
  * iterate, group, transform and extract information from it.
  */
-class Collection : IteratorIterator : ICollection, Serializable
-{
-    use CollectionTrait;
+class Collection : IteratorIterator : ICollection, Serializable {
+    // use CollectionTrait;
 
     /**
      * Constructor. You can provide an array or any traversable object

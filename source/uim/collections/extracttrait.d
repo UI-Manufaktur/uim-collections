@@ -8,8 +8,8 @@ module uim.collections.extracttrait;
 @safe:
 import uim.cake;
 
-use Closure;
-use Traversable;
+/* use Closure;
+use Traversable; */
 
 /**
  * Provides utility protected methods for extracting a property or column

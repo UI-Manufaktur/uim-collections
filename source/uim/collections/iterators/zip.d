@@ -1,11 +1,7 @@
 module uim.collections.iterators;
 
-import uim.collections.Collection;
-import uim.collections.ICollection;
-import uim.collections.CollectionTrait;
-use MultipleIterator;
-use Serializable;
-
+@safe:
+import uim.cake;
 /**
  * Creates an iterator that returns elements grouped in pairs
  *
@@ -54,12 +50,12 @@ class ZipIterator : MultipleIterator : ICollection, Serializable
      * @param callable|null $callable The function to use for zipping the elements of each iterator.
      */
     this(array $sets, ?callable $callable = null) {
-        $sets = array_map(function ($items) {
-            return (new Collection($items)).unwrap();
+        $sets = array_map(function (myItems) {
+            return (new Collection(myItems)).unwrap();
         }, $sets);
 
         _callback = $callable;
-        super((MultipleIterator::MIT_NEED_ALL | MultipleIterator::MIT_KEYS_NUMERIC);
+        super.this(MultipleIterator::MIT_NEED_ALL | MultipleIterator::MIT_KEYS_NUMERIC);
 
         foreach ($sets as $set) {
             _iterators ~= $set;
@@ -75,7 +71,7 @@ class ZipIterator : MultipleIterator : ICollection, Serializable
      */
     #[\ReturnTypeWillChange]
     function current() {
-        if (_callback == null) {
+        if (_callback is null) {
             return super.current();
         }
 
@@ -90,9 +86,7 @@ class ZipIterator : MultipleIterator : ICollection, Serializable
         return serialize(_iterators);
     }
 
-    /**
-     * Magic method used for serializing the iterator instance.
-     */
+    // Magic method used for serializing the iterator instance.
     array __serialize() {
         return _iterators;
     }
@@ -100,12 +94,12 @@ class ZipIterator : MultipleIterator : ICollection, Serializable
     /**
      * Unserializes the passed string and rebuilds the ZipIterator instance
      *
-     * @param string $iterators The serialized iterators
+     * @param string iterators The serialized iterators
      */
     void unserialize($iterators) {
-        super((MultipleIterator::MIT_NEED_ALL | MultipleIterator::MIT_KEYS_NUMERIC);
+        super.this(MultipleIterator::MIT_NEED_ALL | MultipleIterator::MIT_KEYS_NUMERIC);
         _iterators = unserialize($iterators);
-        foreach (_iterators as $it) {
+        foreach ($it; _iterators) {
             this.attachIterator($it);
         }
     }
@@ -113,13 +107,13 @@ class ZipIterator : MultipleIterator : ICollection, Serializable
     /**
      * Magic method used to rebuild the iterator instance.
      *
-     * @param array $data Data array.
+     * @param array myData Data array.
      */
-    void __unserialize(array $data) {
-        super((MultipleIterator::MIT_NEED_ALL | MultipleIterator::MIT_KEYS_NUMERIC);
+    void __unserialize(array myData) {
+        super.this(MultipleIterator::MIT_NEED_ALL | MultipleIterator::MIT_KEYS_NUMERIC);
 
-        _iterators = $data;
-        foreach (_iterators as $it) {
+        _iterators = myData;
+        foreach ($it; _iterators) {
             this.attachIterator($it);
         }
     }

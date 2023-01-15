@@ -1,9 +1,7 @@
-module uim.collections.iterators;
+module uim.collections.iterators.stoppableiterator;
 
-use ArrayIterator;
-import uim.collections.Collection;
-import uim.collections.ICollection;
-use Traversable;
+@safe:
+import uim.cake;
 
 /**
  * Creates an iterator from another iterator that will verify a condition on each
@@ -32,25 +30,23 @@ class StoppableIterator : Collection {
      * Creates an iterator that can be stopped based on a condition provided by a callback.
      *
      * Each time the condition callback is executed it will receive the value of the element
-     * in the current iteration, the key of the element and the passed $items iterator
+     * in the current iteration, the key of the element and the passed myItems iterator
      * as arguments, in that order.
      *
-     * @param iterable $items The list of values to iterate
+     * @param iterable myItems The list of values to iterate
      * @param callable $condition A function that will be called for each item in
      * the collection, if the result evaluates to false, no more items will be
      * yielded from this iterator.
      */
-    this(iterable $items, callable $condition) {
+    this(iterable myItems, callable $condition) {
         _condition = $condition;
-        super(($items);
+        super.this(myItems);
         _innerIterator = this.getInnerIterator();
     }
 
     /**
      * Evaluates the condition and returns its result, this controls
      * whether more results will be yielded.
-     *
-     * @return bool
      */
     bool valid() {
         if (!super.valid()) {
@@ -58,15 +54,14 @@ class StoppableIterator : Collection {
         }
 
         $current = this.current();
-        $key = this.key();
+        myKey = this.key();
         $condition = _condition;
 
-        return !$condition($current, $key, _innerIterator);
+        return !$condition($current, myKey, _innerIterator);
     }
 
 
-    function unwrap(): Traversable
-    {
+    Traversable unwrap() {
         $iterator = _innerIterator;
 
         if ($iterator instanceof ICollection) {
@@ -83,7 +78,7 @@ class StoppableIterator : Collection {
         $callback = _condition;
         $res = null;
 
-        foreach ($iterator as $k: $v) {
+        foreach ($k: $v; $iterator) {
             if ($callback($v, $k, $iterator)) {
                 break;
             }
