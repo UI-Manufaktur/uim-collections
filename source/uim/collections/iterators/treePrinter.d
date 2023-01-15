@@ -1,4 +1,4 @@
-module uim.cake.collections.iterators.treeprinter;
+module uim.collections.iterators.treeprinter;
 
 @safe:
 import uim.cake;

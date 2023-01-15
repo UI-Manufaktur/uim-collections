@@ -1,4 +1,4 @@
-module uim.cake.collections.iterators.sortiterator;
+module uim.collections.iterators.sortiterator;
 
 @safe:
 import uim.cake;

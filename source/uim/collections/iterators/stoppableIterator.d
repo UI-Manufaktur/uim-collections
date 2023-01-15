@@ -1,4 +1,4 @@
-module uim.cake.collections.iterators.stoppableiterator;
+module uim.collections.iterators.stoppableiterator;
 
 @safe:
 import uim.cake;
@@ -9,7 +9,7 @@ import uim.cake;
  * results.
  *
  * @internal
- * @see uim.cake.collections.Collection::stopWhen()
+ * @see uim.collections.Collection::stopWhen()
  */
 class StoppableIterator : Collection {
     /**

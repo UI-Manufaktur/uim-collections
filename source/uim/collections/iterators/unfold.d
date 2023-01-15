@@ -1,4 +1,4 @@
-module uim.cake.collections.iterators;
+module uim.collections.iterators;
 
 use IteratorIterator;
 use RecursiveIterator;
@@ -9,7 +9,7 @@ use Traversable;
  * of items by applying an function to each of the elements in this iterator.
  *
  * @internal
- * @see uim.cake.collections.Collection::unfold()
+ * @see uim.collections.Collection::unfold()
  */
 class UnfoldIterator : IteratorIterator : RecursiveIterator
 {

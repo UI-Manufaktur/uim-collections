@@ -1,8 +1,8 @@
-module uim.cake.collections;
+module uim.collections;
 
-import uim.cake.collections.collection;
-import uim.cake.collections.extracttrait;
-import uim.cake.collections.function_;
-import uim.cake.collections.interface_;
-import uim.cake.collections.collection;
-import uim.cake.collections.collection;
+import uim.collections.collection;
+import uim.collections.extracttrait;
+import uim.collections.function_;
+import uim.collections.interface_;
+import uim.collections.collection;
+import uim.collections.collection;

@@ -1,4 +1,4 @@
-module uim.cake.collections.iterators.nochildreniterator;
+module uim.collections.iterators.nochildreniterator;
 
 @safe:
 import uim.cake;

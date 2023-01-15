@@ -1,8 +1,8 @@
-module uim.cake.collections.iterators;
+module uim.collections.iterators;
 
-import uim.cake.collections.Collection;
-import uim.cake.collections.ICollection;
-import uim.cake.collections.CollectionTrait;
+import uim.collections.Collection;
+import uim.collections.ICollection;
+import uim.collections.CollectionTrait;
 use MultipleIterator;
 use Serializable;
 

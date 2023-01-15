@@ -1,6 +1,6 @@
-module uim.cake.collections.iterators;
+module uim.collections.iterators;
 
-import uim.cake.collections.Collection;
+import uim.collections.Collection;
 use RecursiveIterator;
 use Traversable;
 

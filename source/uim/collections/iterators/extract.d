@@ -1,8 +1,8 @@
-module uim.cake.collections.iterators;
+module uim.collections.iterators;
 
 use ArrayIterator;
-import uim.cake.collections.Collection;
-import uim.cake.collections.ICollection;
+import uim.collections.Collection;
+import uim.collections.ICollection;
 use Traversable;
 
 /**

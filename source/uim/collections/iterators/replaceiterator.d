@@ -1,11 +1,11 @@
-module uim.cake.collections.iterators.replaceiterator;
+module uim.collections.iterators.replaceiterator;
 
 @safe:
 import uim.cake;
 
 use ArrayIterator;
-import uim.cake.collections.Collection;
-import uim.cake.collections.ICollection;
+import uim.collections.Collection;
+import uim.collections.ICollection;
 use Traversable;
 
 /**

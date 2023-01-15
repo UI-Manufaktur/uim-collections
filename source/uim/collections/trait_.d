@@ -1,4 +1,4 @@
-module uim.cake.collections;
+module uim.collections;
 
 @safe:
 import uim.cake;
@@ -28,7 +28,7 @@ trait CollectionTrait
      * type of returned collection interface
      *
      * @param mixed ...$args Constructor arguments.
-     * @return uim.cake.collections.ICollection
+     * @return uim.collections.ICollection
      */
     protected function newCollection(...$args): ICollection
     {
@@ -769,7 +769,7 @@ trait CollectionTrait
      * @param callable|null $operation A callable that allows you to customize the product result.
      * @param callable|null $filter A filtering callback that must return true for a result to be part
      *   of the final results.
-     * @return uim.cake.collections.ICollection
+     * @return uim.collections.ICollection
      * @throws \LogicException
      */
     function cartesianProduct(?callable $operation = null, ?callable $filter = null): ICollection
@@ -827,7 +827,7 @@ trait CollectionTrait
     /**
      * {@inheritDoc}
      *
-     * @return uim.cake.collections.ICollection
+     * @return uim.collections.ICollection
      * @throws \LogicException
      */
     function transpose(): ICollection

@@ -1,4 +1,4 @@
-module uim.cake.collections.interface_;
+module uim.collections.interface_;
 
 @safe:
 import uim.cake
@@ -239,7 +239,7 @@ interface ICollection : Iterator, JsonSerializable
      * @param callable|string $path The column name to use for sorting or callback that returns the value.
      * @param int $sort The sort type, one of SORT_STRING
      * SORT_NUMERIC or SORT_NATURAL
-     * @see uim.cake.collections.ICollection::sortBy()
+     * @see uim.collections.ICollection::sortBy()
      * @return mixed The value of the top element in the collection
      */
     function max($path, int $sort = \SORT_NUMERIC);
@@ -265,7 +265,7 @@ interface ICollection : Iterator, JsonSerializable
      * @param callable|string $path The column name to use for sorting or callback that returns the value.
      * @param int $sort The sort type, one of SORT_STRING
      * SORT_NUMERIC or SORT_NATURAL
-     * @see uim.cake.collections.ICollection::sortBy()
+     * @see uim.collections.ICollection::sortBy()
      * @return mixed The value of the bottom element in the collection
      */
     function min($path, int $sort = \SORT_NUMERIC);
@@ -610,7 +610,7 @@ interface ICollection : Iterator, JsonSerializable
      * @param array $conditions a key-value list of conditions where the key is
      * a property path as accepted by `Collection::extract`, and the value the
      * condition against with each element will be matched
-     * @see uim.cake.collections.ICollection::match()
+     * @see uim.collections.ICollection::match()
      * @return mixed
      */
     function firstMatch(array $conditions);
@@ -1136,7 +1136,7 @@ interface ICollection : Iterator, JsonSerializable
      * This method comes with a number of caveats. Please refer to `ICollection::count()`
      * for details.
      *
-     * @see uim.cake.collections.ICollection::count()
+     * @see uim.collections.ICollection::count()
      */
     size_t countKeys();
 
