@@ -14,8 +14,7 @@ use SplDoublyLinkedList; */
  * Creates an iterator from another iterator that will keep the results of the inner
  * iterator in memory, so that results don"t have to be re-calculated.
  */
-class BufferedIterator : Collection : Countable, Serializable
-{
+class BufferedIterator : Collection : Countable, Serializable {
     /**
      * The in-memory cache containing results from previous iterators
      *
@@ -23,9 +22,7 @@ class BufferedIterator : Collection : Countable, Serializable
      */
     protected _buffer;
 
-    /**
-     * Points to the next record number that should be fetched
-     */
+    // Points to the next record number that should be fetched
     protected int _index = 0;
 
     /**
@@ -42,15 +39,10 @@ class BufferedIterator : Collection : Countable, Serializable
      */
     protected _key;
 
-    /**
-     * Whether the internal iterator"s rewind method was already
-     * called
-     */
+    // Whether the internal iterator"s rewind method was already called
     protected bool _started = false;
 
-    /**
-     * Whether the internal iterator has reached its end.
-     */
+    // Whether the internal iterator has reached its end.
     protected bool _finished = false;
 
     /**
@@ -84,9 +76,7 @@ class BufferedIterator : Collection : Countable, Serializable
         return _current;
     }
 
-    /**
-     * Rewinds the collection
-     */
+    // Rewinds the collection
     void rewind() {
         if (_index == 0 && !_started) {
             _started = true;

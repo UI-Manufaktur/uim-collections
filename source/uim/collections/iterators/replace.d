@@ -1,13 +1,17 @@
+/*********************************************************************************************************
+  Copyright: © 2015-2023 Ozan Nurettin Süel (Sicherheitsschmiede)                                        
+  License: Subject to the terms of the Apache 2.0 license, as written in the included LICENSE.txt file.  
+  Authors: Ozan Nurettin Süel (Sicherheitsschmiede)                                                      
+**********************************************************************************************************/
 module uim.collections.iterators.replaceiterator;
 
 @safe:
 import uim.cake;
 
-use ArrayIterator;
-import uim.collections.Collection;
-import uim.collections.ICollection;
+/* use ArrayIterator;
 use Traversable;
-
+ */
+ 
 /**
  * Creates an iterator from another iterator that will modify each of the values
  * by converting them using a callback function.

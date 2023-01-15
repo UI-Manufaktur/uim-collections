@@ -1,7 +1,13 @@
-module uim.collections.iterators;
+/*********************************************************************************************************
+  Copyright: © 2015-2023 Ozan Nurettin Süel (Sicherheitsschmiede)                                        
+  License: Subject to the terms of the Apache 2.0 license, as written in the included LICENSE.txt file.  
+  Authors: Ozan Nurettin Süel (Sicherheitsschmiede)                                                      
+**********************************************************************************************************/
+module uim.collections.iterators.zip;
 
 @safe:
 import uim.cake;
+
 /**
  * Creates an iterator that returns elements grouped in pairs
  *
@@ -24,8 +30,7 @@ import uim.cake;
  *  $iterator.toList(); // Returns [4, 6]
  * ```
  */
-class ZipIterator : MultipleIterator : ICollection, Serializable
-{
+class ZipIterator : MultipleIterator : ICollection, Serializable {
     use CollectionTrait;
 
     /**

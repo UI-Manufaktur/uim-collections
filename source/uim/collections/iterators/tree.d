@@ -1,9 +1,12 @@
-module uim.collections.iterators;
+/*********************************************************************************************************
+  Copyright: © 2015-2023 Ozan Nurettin Süel (Sicherheitsschmiede)                                        
+  License: Subject to the terms of the Apache 2.0 license, as written in the included LICENSE.txt file.  
+  Authors: Ozan Nurettin Süel (Sicherheitsschmiede)                                                      
+**********************************************************************************************************/
+module uim.collections.iterators.tree;
 
-import uim.collections.ICollection;
-import uim.collections.CollectionTrait;
-use RecursiveIterator;
-use RecursiveIteratorIterator;
+/* use RecursiveIterator;
+use RecursiveIteratorIterator; */
 
 /**
  * A Recursive iterator used to flatten nested structures and also exposes

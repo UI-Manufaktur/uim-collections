@@ -1,15 +1,19 @@
+/*********************************************************************************************************
+  Copyright: © 2015-2023 Ozan Nurettin Süel (Sicherheitsschmiede)                                        
+  License: Subject to the terms of the Apache 2.0 license, as written in the included LICENSE.txt file.  
+  Authors: Ozan Nurettin Süel (Sicherheitsschmiede)                                                      
+**********************************************************************************************************/
 module uim.collections.iterators;
 
-import uim.collections.Collection;
-use RecursiveIterator;
+/* use RecursiveIterator;
 use Traversable;
+ */
 
 /**
  * A type of collection that is aware of nested items and exposes methods to
  * check or retrieve them
  */
-class NestIterator : Collection : RecursiveIterator
-{
+class NestIterator : Collection, RecursiveIterator {
     /**
      * The name of the property that contains the nested items for each element
      *

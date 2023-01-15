@@ -1,9 +1,14 @@
+/*********************************************************************************************************
+  Copyright: © 2015-2023 Ozan Nurettin Süel (Sicherheitsschmiede)                                        
+  License: Subject to the terms of the Apache 2.0 license, as written in the included LICENSE.txt file.  
+  Authors: Ozan Nurettin Süel (Sicherheitsschmiede)                                                      
+**********************************************************************************************************/
 module uim.collections;
 
 @safe:
 import uim.cake;
 
-use AppendIterator;
+/* use AppendIterator;
 use ArrayIterator;
 use Countable;
 use InvalidArgumentException;
@@ -12,14 +17,11 @@ use LogicException;
 use OuterIterator;
 use RecursiveIteratorIterator;
 use RuntimeException;
-use Traversable;
+use Traversable; */
 
-/**
- * Offers a handful of methods to manipulate iterators
- */
-trait CollectionTrait
-{
-    use ExtractTrait;
+// Offers a handful of methods to manipulate iterators
+trait CollectionTrait {
+    // use ExtractTrait;
 
     /**
      * Returns a new collection.

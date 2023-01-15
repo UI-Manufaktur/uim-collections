@@ -1,9 +1,14 @@
-module uim.collections.iterators;
+/*********************************************************************************************************
+  Copyright: © 2015-2023 Ozan Nurettin Süel (Sicherheitsschmiede)                                        
+  License: Subject to the terms of the Apache 2.0 license, as written in the included LICENSE.txt file.  
+  Authors: Ozan Nurettin Süel (Sicherheitsschmiede)                                                      
+**********************************************************************************************************/
+module uim.collections.iterators.mapreduce;
 
-use ArrayIterator;
+/* use ArrayIterator;
 use IteratorAggregate;
 use LogicException;
-use Traversable;
+use Traversable; */
 
 /**
  * : a simplistic version of the popular Map-Reduce algorithm. Acts

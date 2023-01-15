@@ -1,8 +1,13 @@
-module uim.collections.iterators;
+/*********************************************************************************************************
+  Copyright: © 2015-2023 Ozan Nurettin Süel (Sicherheitsschmiede)                                        
+  License: Subject to the terms of the Apache 2.0 license, as written in the included LICENSE.txt file.  
+  Authors: Ozan Nurettin Süel (Sicherheitsschmiede)                                                      
+**********************************************************************************************************/
+module uim.collections.iterators.unfold;
 
-use IteratorIterator;
+/* use IteratorIterator;
 use RecursiveIterator;
-use Traversable;
+use Traversable; */
 
 /**
  * An iterator that can be used to generate nested iterators out of a collection
@@ -11,8 +16,7 @@ use Traversable;
  * @internal
  * @see uim.collections.Collection::unfold()
  */
-class UnfoldIterator : IteratorIterator : RecursiveIterator
-{
+class UnfoldIterator : IteratorIterator : RecursiveIterator {
     /**
      * A function that is passed each element in this iterator and
      * must return an array or Traversable object.
@@ -39,7 +43,7 @@ class UnfoldIterator : IteratorIterator : RecursiveIterator
      */
     this(Traversable $items, callable $unfolder) {
         _unfolder = $unfolder;
-        super(($items);
+        super($items);
         _innerIterator = this.getInnerIterator();
     }
 
